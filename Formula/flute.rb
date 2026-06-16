@@ -1,25 +1,25 @@
 class Flute < Formula
   desc "Cross-platform CLI for the Flute payments platform"
   homepage "https://github.com/getflute/flute-cli"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getflute/flute-cli/releases/download/v0.1.1/flute-aarch64-apple-darwin.tar.xz"
-      sha256 "dfdcff4bb021ce073fd36bb684f9a576518868eab2ec136a22a97fda428ab55d"
+      url "https://github.com/getflute/flute-cli/releases/download/v0.1.2/flute-aarch64-apple-darwin.tar.xz"
+      sha256 "ed58c888c4b0d46da6b8b3a9e6e5767ab3259e8ce7bf07097aeee2e920dce560"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getflute/flute-cli/releases/download/v0.1.1/flute-x86_64-apple-darwin.tar.xz"
-      sha256 "8548dc684a2f8371b6f2e05cb896129342399bd6ea0b425d5271ae618967814f"
+      url "https://github.com/getflute/flute-cli/releases/download/v0.1.2/flute-x86_64-apple-darwin.tar.xz"
+      sha256 "53b1f4596404e6465f8014330d5f6bb75f6023542ad343eefac5e95ced0707ea"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getflute/flute-cli/releases/download/v0.1.1/flute-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "83cf7f972ea65219f247f7e0487b00adfa919574479ebb5414aea281c09fb42c"
+      url "https://github.com/getflute/flute-cli/releases/download/v0.1.2/flute-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1f69572a4e980bb7d0f13284c9a7fa9a1d91e1c0ac22a077dc0dc3ea8ab56632"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getflute/flute-cli/releases/download/v0.1.1/flute-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "512425b5056398fb9df743e0ccb12c7d7ade62bae80c5743df040841fe015af4"
+      url "https://github.com/getflute/flute-cli/releases/download/v0.1.2/flute-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fed88581f883233b2bb7a10510c09ea54bd47a523da1ad5094d9cba23df29d66"
     end
   end
   license "MIT"
