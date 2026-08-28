@@ -1,25 +1,25 @@
 class Flute < Formula
   desc "Cross-platform CLI for the Flute payments platform"
   homepage "https://github.com/getflute/flute-cli"
-  version "1.1.1"
+  version "1.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getflute/flute-cli/releases/download/v1.1.1/flute-aarch64-apple-darwin.tar.xz"
-      sha256 "71c7b4de24944c867f6285f109c11f5c5d8776de52f7c7bffcd6f72d8c06dd17"
+      url "https://github.com/getflute/flute-cli/releases/download/v1.1.2/flute-aarch64-apple-darwin.tar.xz"
+      sha256 "db4ffd72e5a2f604de5d2ab89ca9bb3f2c5ea1ae69e283abc681707fa03e01be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getflute/flute-cli/releases/download/v1.1.1/flute-x86_64-apple-darwin.tar.xz"
-      sha256 "0dd119cc9c4e4589143a09c3ddea2c8ff8e1f596c8d05be4cba52497021f5c0b"
+      url "https://github.com/getflute/flute-cli/releases/download/v1.1.2/flute-x86_64-apple-darwin.tar.xz"
+      sha256 "7db54557aa9e331aa598667f9cc730ef9eacfd535e7dc98381126d490f1745c8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getflute/flute-cli/releases/download/v1.1.1/flute-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2bcad61fff5c0163fb99ef7a5c91fad9e3e2b27e46881b2f18bbbe67c34bce63"
+      url "https://github.com/getflute/flute-cli/releases/download/v1.1.2/flute-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "775579dfa47eeecfb86a17c9ba422bff83350e6a9c84b8328b6ea96f9675cb4c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getflute/flute-cli/releases/download/v1.1.1/flute-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "83dd9e39b909f24a9f5f65e569a4c3f1163c80672269f4d80dbdb2baff92d960"
+      url "https://github.com/getflute/flute-cli/releases/download/v1.1.2/flute-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a21f53aef8e2502ebaef2385a1fb3b661530651996d40f1fc976add38782f64e"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Flute < Formula
   end
 
   def install
-    bin.install "flute" if OS.mac? && Hardware::CPU.arm?
-    bin.install "flute" if OS.mac? && Hardware::CPU.intel?
-    bin.install "flute" if OS.linux? && Hardware::CPU.arm?
-    bin.install "flute" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "flute"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "flute"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "flute"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "flute"
+    end
 
     install_binary_aliases!
 
